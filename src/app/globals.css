@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-fraunces: 'Fraunces', serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html, body {
+  background: #DDD9CC;
+  color: #1B2733;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Mobile-app shell: full width on phones, phone-frame on desktop */
+.app-shell {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background: #F7F3EA;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(8,26,46,0.25);
+}
+@media (min-width: 640px) {
+  .app-shell {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: calc(100dvh - 48px);
+  }
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* 3D tilt card */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform .15s ease;
+  will-change: transform;
+}
+
+/* Running testimonial marquee */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+}
+
+/* Page transition */
+.page-fade {
+  animation: fadeup .35s ease both;
+}
+@keyframes fadeup {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scrollbar hidden on mobile chrome */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
