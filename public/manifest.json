@@ -1,0 +1,12 @@
+{
+  "name": "Golden Pass",
+  "short_name": "Golden Pass",
+  "description": "UAE Golden Visa & Property Valuation platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F3EA",
+  "theme_color": "#0E2A47",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
